@@ -131,3 +131,13 @@ streamlit run visualize.py
 - 请勿将配置文件上传至公开仓库，其中包含了个人信息。
 - 请勿频繁请求电费数据，以免对校园网造成影响。
 - 对于电量的平均消耗计算仅供参考，在可视化页面选取较长的时间范围**可能**可以获取更准确的预测值。
+
+## Star History
+
+<a href="https://star-history.com/#hongjr03/OUC-Electricity-Monitor&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=hongjr03/OUC-Electricity-Monitor&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=hongjr03/OUC-Electricity-Monitor&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=hongjr03/OUC-Electricity-Monitor&type=Date" />
+ </picture>
+</a>

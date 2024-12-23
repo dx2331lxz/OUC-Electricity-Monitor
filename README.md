@@ -10,6 +10,22 @@
 
 ## 使用
 
+支持 Docker 部署、通过 Bash 脚本安装和手动配置三种方法部署。Docker 一键部署较方便，而后两种方法要求自行修改 config.toml 文件定制配置参数，如有 Bark 推送需求请使用后两种方法部署。
+
+### Docker 部署
+
+先构建镜像。根据你的学号修改 student_id 后的 12345。如果住的宿舍有两个隔间，修改 categoryEnergy_id 后的空调编号（对应隔间编号，1或者2），否则无需修改。
+
+```bash
+docker build --build-arg student_id=12345 --build-arg categoryEnergy_id=1 -t ouc-electricity-monitor .
+```
+
+运行镜像：
+
+```bash
+docker run -d -p 8501:8501 --name ouc-electricity-container ouc-electricity-monitor
+```
+
 ### 编辑配置文件
 
 请保证已连接到校园网，然后编辑 `config.toml` 文件，填入**学号**和数据库信息。
@@ -125,15 +141,7 @@ python init.py
 ```bash
 streamlit run visualize.py
 ```
-### docker一键部署
-构建镜像，根据你的学号修改student_id部分，这里categoryEnergy_id代表的是空调编号
-```bash
-docker build --build-arg student_id=12345 --build-arg categoryEnergy_id=1 -t ouc-electricity-monitor .
-```
-运行镜像
-```bash
-docker run -d -p 8501:8501 --name ouc-electricity-container ouc-electricity-monitor
-```
+
 ## 注意
 
 - 请勿将配置文件上传至公开仓库，其中包含了个人信息。

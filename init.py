@@ -87,9 +87,9 @@ if __name__ == "__main__":
 
             print("请选择一个空调末端：")
             for i in range(len(category)):
-                print(f"[{i + 1}]: {category[i]['roomName']}")
+                print(f"[{category[i]['index']}]: {category[i]['roomName']}")
 
-            index = int(input("请输入方框内的编号：")) - 1
+            index = int(input("请输入方框内的编号："))
 
             # 保留 "照明与插座" 和选择的空调末端
             eqptData = [

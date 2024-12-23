@@ -30,8 +30,7 @@ electricity_fee = config["student"]["electricity_fee"]
 
 
 if __name__ == "__main__":
-    id = config["student"]["id"]
-
+    id = os.getenv("student_id") or config["student"]["id"]
     headers = {
         "accept": "*/*",
         "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-ES;q=0.5,es;q=0.4",
@@ -89,7 +88,8 @@ if __name__ == "__main__":
             for i in range(len(category)):
                 print(f"[{category[i]['index']}]: {category[i]['roomName']}")
 
-            index = int(input("请输入方框内的编号："))
+            categoryEnergy_id = os.getenv("categoryEnergy_id") or input("请输入方框内的编号：")
+            index = int(categoryEnergy_id)
 
             # 保留 "照明与插座" 和选择的空调末端
             eqptData = [

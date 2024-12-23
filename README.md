@@ -125,7 +125,15 @@ python init.py
 ```bash
 streamlit run visualize.py
 ```
-
+### docker一键部署
+构建镜像，根据你的学号修改student_id部分
+```bash
+docker build --build-arg student_id=12345 --build-arg categoryEnergy_id=2 -t ouc-electricity-monitor .
+```
+运行镜像
+```bash
+docker run -d -p 8501:8501 ouc-electricity-monitor
+```
 ## 注意
 
 - 请勿将配置文件上传至公开仓库，其中包含了个人信息。

@@ -166,7 +166,7 @@ def notify(
 
             # 构建邮件内容
             message = MIMEText(content, "plain", "utf-8")
-            message["From"] = Header(from_email, "utf-8")
+            message["From"] = Header(from_email)
             message["To"] = Header(", ".join(to_emails), "utf-8")  # 发送给多个收件人
             message["Subject"] = Header(subject, "utf-8")
             print(smtp_server, smtp_port, from_email, to_emails, email_password, subject, content)

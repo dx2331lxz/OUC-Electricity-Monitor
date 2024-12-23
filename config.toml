@@ -33,3 +33,7 @@ file_path = "Electricity.db"
 [student.equipments.chazuo]
 equipmentInfoId = "10.150.132.76#00066"
 roomName = "125"
+
+[student.equipments.kongtiao]
+equipmentInfoId = "10.150.132.76#00080"
+roomName = "125(空调)-1"

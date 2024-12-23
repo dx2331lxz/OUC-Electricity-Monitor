@@ -126,13 +126,13 @@ python init.py
 streamlit run visualize.py
 ```
 ### docker一键部署
-构建镜像，根据你的学号修改student_id部分
+构建镜像，根据你的学号修改student_id部分，这里categoryEnergy_id代表的是空调编号
 ```bash
-docker build --build-arg student_id=12345 --build-arg categoryEnergy_id=2 -t ouc-electricity-monitor .
+docker build --build-arg student_id=12345 --build-arg categoryEnergy_id=1 -t ouc-electricity-monitor .
 ```
 运行镜像
 ```bash
-docker run -d -p 8501:8501 ouc-electricity-monitor
+docker run -d -p 8501:8501 --name ouc-electricity-container ouc-electricity-monitor
 ```
 ## 注意
 

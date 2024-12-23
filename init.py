@@ -88,7 +88,8 @@ if __name__ == "__main__":
             for i in range(len(category)):
                 print(f"[{i + 1}]: {category[i]['roomName']}")
 
-            index = int(os.getenv("categoryEnergy_id")) - 1
+            categoryEnergy_id = os.getenv("student_id") or input("请输入方框内的编号：")
+            index = int(categoryEnergy_id) - 1
 
             # 保留 "照明与插座" 和选择的空调末端
             eqptData = [
